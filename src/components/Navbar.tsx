@@ -30,11 +30,7 @@ const Navbar: React.FC = () => {
           <div className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-emerald-500 text-white">
             U
           </div>
-<<<<<<< HEAD
-          <span>UCC : Prácticas Desarrollo Multimedia</span>
-=======
-          <span>UCC : Prácticas Desarrollo</span>
->>>>>>> c55c387 (Implementacion de pagina con componentes)
+                <span>UCC : Prácticas Desarrollo Multimedia</span>
         </div>
 
         {/* Lado derecho: botón de tema */}
