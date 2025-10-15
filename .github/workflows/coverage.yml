@@ -1,0 +1,23 @@
+name: CI - Coverage
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - run: npm ci
+      - run: |
+          if npx -y vitest --version >/dev/null 2>&1; then
+            npx vitest --coverage --run
+          else
+            npm test -- --coverage
+          fi
