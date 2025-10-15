@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 // src/routes/AppRoutes.tsx
->>>>>>> c55c387 (Implementacion de pagina con componentes)
 import { Routes, Route } from "react-router-dom";
 import Layout from "../components/Layout";
 
@@ -12,8 +9,6 @@ import LayoutsView from "../views/LayoutsView";
 import SpeechDemoView from "../views/SpeechDemoView";
 import GeometryExplorer from "../views/GeometryExplorer";
 import SettingsView from "../views/SettingsView";
-<<<<<<< HEAD
-=======
 import TablasMul from "../views/TablasMul";
 import ConversorUnid from "../views/ConversorUnid";
 import ValidContrasena from "../views/ValidContrasena";
@@ -22,7 +17,6 @@ import ListaTareas from "../views/ListaTareas";
 import CuentaAtras from "../views/CuentaAtras";
 import ColorPicker from "../components/ColorPicker";
 import SearchList from "../components/SearchList";
->>>>>>> c55c387 (Implementacion de pagina con componentes)
 
 export default function AppRoutes() {
   return (
@@ -34,8 +28,8 @@ export default function AppRoutes() {
         <Route path="tts" element={<SpeechDemoView />} />
         <Route path="three_2" element={<GeometryExplorer />} />
         <Route path="settings" element={<SettingsView />} />
-<<<<<<< HEAD
-=======
+
+        {/* Extra routes */}
         <Route path="tablasmul" element={<TablasMul />} />
         <Route path="conversorunid" element={<ConversorUnid />} />
         <Route path="validcontrasena" element={<ValidContrasena />} />
@@ -44,7 +38,6 @@ export default function AppRoutes() {
         <Route path="cuentaatras" element={<CuentaAtras />} />
         <Route path="colorpicker" element={<ColorPicker />} />
         <Route path="searchlist" element={<SearchList />} />
->>>>>>> c55c387 (Implementacion de pagina con componentes)
       </Route>
     </Routes>
   );
