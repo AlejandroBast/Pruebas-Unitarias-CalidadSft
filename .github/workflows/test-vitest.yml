@@ -1,10 +1,11 @@
-name: CI - Vitest
+name: CI - Pruebas con Vitest
 
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  workflow_dispatch: {}
 
 jobs:
   vitest:

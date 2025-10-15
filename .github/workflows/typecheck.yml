@@ -1,10 +1,11 @@
-name: CI - Typecheck
+name: CI - Verificación de tipos (Typecheck)
 
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  workflow_dispatch: {}
 
 jobs:
   typecheck:

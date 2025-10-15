@@ -1,4 +1,5 @@
-name: CI - Audit Dependencies
+
+name: CI - Auditoría de dependencias
 
 on:
   schedule:

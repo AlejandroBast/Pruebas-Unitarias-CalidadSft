@@ -1,10 +1,11 @@
-name: CI - Unit Tests (Jest)
+name: CI - Pruebas Unitarias (Jest)
 
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  workflow_dispatch: {}
 
 jobs:
   jest:
