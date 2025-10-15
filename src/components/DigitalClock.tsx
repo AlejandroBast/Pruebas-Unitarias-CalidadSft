@@ -2,15 +2,19 @@
 import { useEffect, useState } from "react";
 
 export default function DigitalClock() {
-  const [time, setTime] = useState<string>(() => {
-    const now = new Date();
-    return now.toLocaleTimeString("es-CO", { hour12: false });
-  });
+  const formatTime = (date: Date) => {
+    const hh = String(date.getHours()).padStart(2, "0");
+    const mm = String(date.getMinutes()).padStart(2, "0");
+    const ss = String(date.getSeconds()).padStart(2, "0");
+    return `${hh}:${mm}:${ss}`;
+  };
+
+  const [time, setTime] = useState<string>(() => formatTime(new Date()));
 
   useEffect(() => {
     const interval = setInterval(() => {
       const now = new Date();
-      setTime(now.toLocaleTimeString("es-CO", { hour12: false }));
+      setTime(formatTime(now));
     }, 1000);
 
     return () => clearInterval(interval);

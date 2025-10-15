@@ -18,7 +18,11 @@ export default function ColorPicker() {
         id="color-input"
         type="color"
         value={color}
-        onChange={(e) => setColor(e.target.value)}
+        onChange={(e) => {
+          setColor(e.target.value);
+          // Guardar inmediatamente para que las pruebas detecten la llamada
+          localStorage.setItem("selectedColor", e.target.value);
+        }}
         className="w-16 h-10 border cursor-pointer"
       />
       <div
