@@ -5,138 +5,83 @@
 Este proyecto es un aplicativo desarrollado en **React con Vite** para aprender y aplicar **pruebas unitarias** con Jest.
 
 El aplicativo incluye:
+# Pruebas Unitarias — Aplicación React (Vite)
 
-* **Sidebar con acordeón** para navegación.
-* **Componentes de ejemplo** para verificar dependencias.
-* **Ejercicios con pruebas unitarias**:
+Proyecto con ejemplos y ejercicios para practicar React, TypeScript y pruebas unitarias.
 
-  * Tablas de Multiplicar (`TablasMul.tsx`)
-  * Conversor de Unidades (`UnitConverter.tsx`)
-  * Validador de Contraseñas (`PasswordValidator.tsx`)
-  * Contador de Clics (`ClickCounter.tsx`)
-  * Lista de Tareas (`TodoList.tsx`)
+## Contenido
 
----
+- Componentes reutilizables en `src/components`.
+- Vistas y rutas en `src/views` y `src/routes`.
+- Configuración de pruebas con Jest / Vitest según el script disponible.
 
-## Instalación
+## Ejecutar localmente
 
-Clonar el repositorio:
-
-```bash
-git clone https://github.com/guswill24/ucc_ing_web.git
-cd clase-ucc
-```
-
-Instalar dependencias:
+1. Instalar dependencias:
 
 ```bash
 npm install
 ```
 
----
-
-## Scripts disponibles
-
-* **Iniciar servidor de desarrollo**
+2. Ejecutar servidor de desarrollo:
 
 ```bash
 npm run dev
 ```
 
-* **Compilar para producción**
+3. Compilar para producción:
 
 ```bash
 npm run build
 ```
 
-* **Previsualizar build de producción**
+4. Ejecutar pruebas (Jest o Vitest según tu configuración):
 
 ```bash
-npm run preview
+npm test        # si usas jest
+npx vitest      # si usas vitest
 ```
 
-* **Ejecutar pruebas unitarias**
-
-```bash
-npm test
-```
-
-* **Revisar tipos TypeScript**
+5. Revisar tipos (TypeScript):
 
 ```bash
 npm run type-check
 ```
 
-* **Linting y formateo**
+6. Lint y formateo:
 
 ```bash
 npm run lint
 npm run format
 ```
 
----
+## Workflows de CI
 
-## Estructura de Carpetas
+En este repositorio hay 2 workflows activos en `.github/workflows`:
 
+- `ci.yml` — ejecuta lint, type-check, build y pruebas (integrado).
+- `ci-vitest.yml` — ejecuta pruebas con Vitest.
+
+Ambos workflows incluyen `workflow_dispatch` para ejecutarlos manualmente desde la pestaña **Actions** en GitHub.
+
+Cómo ejecutar manualmente:
+
+1. Ve a la pestaña **Actions** del repositorio en GitHub.
+2. Selecciona el workflow (`CI - Integrado` o `CI - Vitest`).
+3. Pulsa **Run workflow** (en la columna derecha) y confirma.
+
+## Despliegue (opcional)
+
+Si quieres publicar en GitHub Pages, necesitaremos un workflow de despliegue que genere `dist` y publique en la rama `gh-pages`. Puedo añadirlo de nuevo si lo deseas.
+
+## Notas y archivos importantes
+
+- `package.json` — scripts y dependencias.
+- `tsconfig.json` — configuración de TypeScript.
+- `package.json.backup` — copia de seguridad local (puedes borrarla si no la necesitas).
+
+## Autor / Mantenimiento
+
+Si quieres que automatice el despliegue a Pages, o que ajuste la configuración para producción (por ejemplo `base` en `vite.config.ts`), dime y lo hago.
 ```
-src/
-├─ components/       # Componentes reutilizables (Sidebar, UnitConverter, etc.)
-├─ views/            # Vistas de cada ejercicio y ejemplo
-├─ AppRoutes.tsx     # Rutas principales
-└─ main.tsx          # Entrada principal de React
-```
-
----
-
-## Componentes y funcionalidades
-
-1. **Sidebar.tsx**: Menú lateral con acordeón, permite agrupar ejercicios y ejemplos.
-2. **UnitConverter.tsx**: Conversor de unidades (Celsius ↔ Fahrenheit) con input controlado.
-3. **PasswordValidator.tsx**: Validador de contraseñas dinámico, muestra requisitos cumplidos.
-4. **ClickCounter.tsx**: Contador de clics persistente usando `localStorage`.
-5. **TodoList.tsx**: Lista de tareas con agregar y eliminar elementos.
-6. **TablasMul.tsx**: Tabla de multiplicar interactiva.
-
----
-
-## Pruebas unitarias
-
-Las pruebas unitarias están desarrolladas con **Jest** y **React Testing Library**.
-
-* Validan la correcta interacción de los componentes.
-* Comprobar que `localStorage` persista valores en `ClickCounter`.
-* Verificar la lógica de validación en `PasswordValidator`.
-* Confirmar el funcionamiento de agregar y eliminar tareas en `TodoList`.
-* Aseguran que los componentes principales rendericen correctamente.
-
-Ejecutar todas las pruebas:
-
-```bash
-npm test
-```
-
----
-
-## Consideraciones
-
-* Se recomienda **investigar, analizar e interpretar cada ejercicio** antes de ejecutar pruebas unitarias.
-* Las pruebas serán evaluadas de manera **individual en clase**, considerando la explicación del proceso y la solución aplicada.
-
----
-
-## Dependencias principales
-
-* `react`, `react-dom`, `react-router-dom`
-* `three`
-* `tailwindcss`
-* `framer-motion`
-* `jest`, `@testing-library/react`, `@testing-library/jest-dom`, `@types/jest`
-
----
-
-## Autor
-
-**Gustavo Sánchez Rodríguez**
-Asignatura: Ingeniería Web
-Clase UCC
 
