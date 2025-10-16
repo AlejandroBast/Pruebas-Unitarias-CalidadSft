@@ -1,6 +1,7 @@
 # Clase UCC - Aplicativo React con Vite
 
 ## Descripción
+By: Michael Lagos y Nicolas Bastidas
 
 Este proyecto es un aplicativo desarrollado en **React con Vite** para aprender y aplicar **pruebas unitarias** con Jest.
 
