@@ -81,8 +81,5 @@ Si quieres publicar en GitHub Pages, necesitaremos un workflow de despliegue que
 - `tsconfig.json` — configuración de TypeScript.
 - `package.json.backup` — copia de seguridad local (puedes borrarla si no la necesitas).
 
-## Autor / Mantenimiento
 
-Si quieres que automatice el despliegue a Pages, o que ajuste la configuración para producción (por ejemplo `base` en `vite.config.ts`), dime y lo hago.
-```
 
